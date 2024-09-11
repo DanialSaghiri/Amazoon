@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,8 +7,13 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  background-color: rgba(128, 128, 128, 0.249);
 }
-.upNav{
+.container{
+  max-width: 90%;
+  margin: 0 auto;
+}
+.upNav {
   width: 100%;
   background-color: rgba(1, 1, 32, 0.671);
   padding: 8px;
@@ -16,15 +21,18 @@
   align-items: center;
   gap: 12px;
 }
-.upNav > p{
+.upNav > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   border: 1px solid transparent;
-  padding: 4px;
 }
 .upNav > p:hover {
   border: 1px solid black;
 }
-.deliver{
+.deliver {
+  width: 100px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -32,26 +40,26 @@
   color: white;
   cursor: pointer;
 }
-.deliver:hover{
+.deliver:hover {
   border: 1px solid black;
 }
-.deliver > p{
+.deliver > p {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.deliver  span{
+.deliver span {
   font-size: 18px;
   font-weight: 700;
 }
-.search{
+.search {
   display: flex;
   width: 600px;
   align-items: center;
   border-radius: 8px;
 }
-.dropDown{
+.dropDown {
   width: 20%;
   height: 42px;
   display: flex;
@@ -60,36 +68,36 @@
   padding: 2px;
   text-align: center;
   cursor: pointer;
-  border-top-left-radius:8px ;
-  border-bottom-left-radius:8px ;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   border-right: 1px solid black;
 }
-.search  input{
+.search input {
   padding: 2px;
   width: 70%;
   height: 40px;
   border: none;
   outline: none;
 }
-.search > i{
+.search > i {
   width: 10%;
   height: 40px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:rgb(199, 177, 136);
+  background-color: rgb(199, 177, 136);
   color: white;
   font-size: 20px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-.infoLanguage{
+.infoLanguage {
   display: flex;
   position: relative;
   flex-direction: column;
 }
-.language{
+.language {
   padding: 10px;
   display: flex;
   cursor: pointer;
@@ -105,19 +113,19 @@
   color: white;
 }
 
-.linkChange{
+.linkChange {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
 }
-.changeLanguageSelect{
+.changeLanguageSelect {
   margin-bottom: 10px;
   padding: 10px;
-  border-bottom:1px solid gray ;
+  border-bottom: 1px solid gray;
 }
-.changeLanguageSelect div{
+.changeLanguageSelect div {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -128,54 +136,56 @@ a {
   color: black;
   text-decoration: none;
 }
-.border{
+.border {
   border-bottom: 1px solid gray;
 }
-.Shoping{
+.Shoping {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 10px;
 }
-.info:last-child{
+.info:last-child {
   text-align: center;
 }
 
-.signIn{
+.signIn {
   width: 120px;
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.info , .infoSignIn{
+.info,
+.infoSignIn {
   width: 350px;
   padding: 10px;
   border-radius: 4px;
   position: absolute;
   top: 50px;
   right: 30px;
+  z-index: 80;
   background-color: white;
   display: none;
 }
-.language:hover + .info
-{
+.language:hover + .info {
   display: inline-block;
- }
- .signInText{
+}
+.signInText {
   cursor: pointer;
   border: 1px solid transparent;
   padding: 2px;
- }
- .signInText:hover{
+}
+.signInText:hover {
   border: 1px solid black;
- }
- .signInText:hover + .infoSignIn{
+}
+.signInText:hover + .infoSignIn {
   display: inline-block;
- }
- .info:hover,.infoSignIn:hover{
+}
+.info:hover,
+.infoSignIn:hover {
   display: inline-block;
- }
- .btnSignIn{
+}
+.btnSignIn {
   width: 65%;
   cursor: pointer;
   display: flex;
@@ -187,39 +197,152 @@ a {
   background-color: goldenrod;
   padding: 10px;
   margin: 10px auto;
- }
- .accountList{
+}
+.accountList {
   display: flex;
   padding: 5px;
   justify-content: space-between;
   border-top: 1px solid rgba(128, 128, 128, 0.267);
- }
- .list{
+}
+.list {
   width: 50%;
   display: flex;
   flex-direction: column;
   border-right: 1px solid rgba(128, 128, 128, 0.267);
- }
- .account{
+}
+.account {
   width: 50%;
   display: flex;
   flex-direction: column;
- }
- .shop{
+}
+.shop {
   display: flex;
   align-items: end;
   cursor: pointer;
- }
- .imgShop{
+}
+.imgShop {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
- }
- .imgShop span{
+}
+.imgShop span {
   position: relative;
   top: 20px;
- }
+}
+.downNav {
+  width: 100%;
+  background-color: rgba(1, 1, 32, 0.371);
+}
+.downNav img {
+  width: 20px;
+  height: 20px;
+}
+.menu > span,
+.menuBurger {
+  padding: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menu > span:hover,
+.menuBurger:hover {
+  border: 1px solid white;
+}
+.menuBurger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.notActive,.active{
+  width: 25%;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left:-30%;
+  z-index: 100;
+  transition: ease-out 1s ;
+}
+.active{
+  transition: ease-out 1s ;
+  left: 0;
+}
+
+.user{
+  width: 100%;
+  height: 50px;
+  background-color: rgba(37, 39, 50);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+  justify-content: flex-start;
+  color: white;
+}
+.user img{
+  width: 40px;
+  height: 40px;
+}
+.devices,.department,.music{
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border-bottom: 1px solid gray;
+
+}
+.department{
+  border-bottom: none;
+}
+.active span{
+  display: flex;
+  cursor: pointer;
+  padding: 8px;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.active span:hover{
+  background-color: aquamarine;
+}
+.music{
+  margin-top: 10px;
+  border-top: 1px solid gray;
+  border-bottom: none;
+}
+.slider{
+  width: 100%;
+  height: 500px;
+  position: absolute;
+}
+.slider img{
+  width: 100%;
+}
+main{
+  position: relative;
+}
+.products{
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  top: 220px;
+}
+
+.product{
+  width: 19%;
+  height: 400px;
+  background-color: white;
+  z-index: 70;
+}
 /*
 a:hover {
   color: #535bf2;
