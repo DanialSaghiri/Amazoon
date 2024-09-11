@@ -1,8 +1,58 @@
 {
-    "data":[
+    "products":[
         {
             "id":1,
-            "name":"ali"
+            "img":"./src/assets/images/product1.avif",
+            "name":"Mac",
+            "DiscountedPrice":"$22500",
+            "price":"$25000",
+            "Description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "score":2
+        },
+        {
+            "id":2,
+            "img":"./src/assets/images/product2.avif",
+            "name":"Iphone case",
+            "DiscountedPrice":"$11300",
+            "price":"$12500",
+            "Description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "score":4
+        },
+        {
+            "id":3,
+            "img":"./src/assets/images/product3.avif",
+            "name":"Iphone",
+            "DiscountedPrice":"$1100",
+            "price":"$1200",
+            "Description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "score":2.75
+        },
+        {
+            "id":4,
+            "img":"./src/assets/images/product4.avif",
+            "name":"Samsung s22",
+            "DiscountedPrice":"$300",
+            "price":"$250",
+            "Description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "score":5
+        },
+        {
+            "id":5,
+            "img":"./src/assets/images/product5.avif",
+            "name":"Iphone case",
+            "DiscountedPrice":"$50",
+            "price":"$40",
+            "Description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "score":0.5
+        },
+        {
+            "id":6,
+            "img":"./src/assets/images/product6.avif",
+            "name":"Acer",
+            "DiscountedPrice":"$9000",
+            "price":"$10000",
+            "Description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "score":3.5
         }
     ]
 }

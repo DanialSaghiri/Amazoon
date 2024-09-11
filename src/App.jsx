@@ -1,4 +1,4 @@
-import { useReducer, useRef, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import axios from "axios";
 import Select from "react-select";
 import { Navigation } from "swiper/modules";
@@ -18,24 +18,36 @@ import image6 from "./assets/images/slider1.avif";
 import image7 from "./assets/images/slider2.avif";
 import image8 from "./assets/images/slider3.avif";
 import image9 from "./assets/images/slider4.avif";
-
-// const getData = async () => {
-//   const respons = await axios("http://localhost:5000/data");
-//   console.log(respons);
-// };
-// getData();
+import imgScore from "./assets/images/score.avif";
 
 function App() {
   const [activeMenu, setActiveMenu] = useState("notActive");
   const [page, setPage] = useState(false);
+  const [datas, setDatas] = useState([]);
   const menuHandler = () => {
     activeMenu === "active"
       ? setActiveMenu("notActive")
       : setActiveMenu("active");
   };
+
+  const scrol = useRef();
+
+  const scrollHandler = () => {
+    scrol.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const getData = async () => {
+    const respons = await axios("http://localhost:5000/products");
+    setDatas(respons?.data);
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <>
       <header>
+        <div ref={scrol}></div>
         <section className="upNav">
           <img src={image} alt="Amazoon" />
           <div className="deliver">
@@ -217,7 +229,6 @@ function App() {
         </section>
       </header>
       <main className="container">
-        
         <Swiper
           modules={[Navigation]}
           spaceBetween={50}
@@ -238,15 +249,38 @@ function App() {
             <img src={image9} alt="" />
           </SwiperSlide>
         </Swiper>
-        <section className="products">
-          <div className="product"></div>
-          <div className="product"></div>
-          <div className="product"></div>
-          <div className="product"></div>
-          <div className="product"></div>
-          <div className="product"></div>
-        </section>
+        <ul className="products">
+          {datas.map((data) => {
+            return (
+              <li className="product" key={data.id}>
+                <img src={data.img} alt={data.name} />
+                <h2>{data.name}</h2>
+                <h4>{data.DiscountedPrice}</h4>
+                <h5>{data.price}</h5>
+                <p>{data.Description}</p>
+                <div>
+                  <div>
+                    <img src={imgScore} alt="score" />
+                    <img src={imgScore} alt="score" />
+                    <img src={imgScore} alt="score" />
+                    <img src={imgScore} alt="score" />
+                    <img src={imgScore} alt="score" />
+                  </div>
+                  <span>{data.score}</span>
+                </div>
+                <button>see more ...</button>
+              </li>
+            );
+          })}
+        </ul>
       </main>
+      <footer>
+        <button onClick={scrollHandler}>Back to top</button>
+        <section>
+          <div></div>
+          <div></div>
+        </section>
+      </footer>
     </>
   );
 }
