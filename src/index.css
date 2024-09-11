@@ -63,7 +63,7 @@
   width: 20%;
   height: 42px;
   display: flex;
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.26);
   align-items: center;
   padding: 2px;
   text-align: center;
@@ -166,6 +166,7 @@ ul, li{
   position: absolute;
   top: 50px;
   right: 30px;
+  cursor: pointer;
   z-index: 80;
   background-color: white;
   display: none;
@@ -293,14 +294,14 @@ ul, li{
   width: 40px;
   height: 40px;
 }
-.devices,.department,.music{
+.devices,.department,.music,.aboutUs{
   display: flex;
   flex-direction: column;
   padding: 8px;
   border-bottom: 1px solid gray;
 
 }
-.department{
+.department,.aboutUs{
   border-bottom: none;
 }
 .active span{
@@ -386,6 +387,43 @@ footer button{
   cursor: pointer;
   justify-content: center;
   background-color: rgb(48, 46, 46,0.6);
+  color: white;
+}
+.footer{
+  width: 100%;
+  background-color: rgb(37, 39, 60);
+}
+.about{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  border-bottom: 1px solid gray;
+}
+.about span{
+  cursor: pointer;
+  margin: 8px 0;
+
+}
+.aboutUs{
+  color: white;
+}
+.informatin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  gap: 10px;
+}
+.informatin div{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.informatin div,.informatin > p{
+  cursor: pointer;
+  padding: 4px;
+  border: 2px solid gray;
   color: white;
 }
 /*
