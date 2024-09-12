@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import { ProductsContext } from "../../context/Products/ProductsContext";
 
@@ -10,7 +11,7 @@ function Products() {
     <ul className="products">
       {datas.map((data) => {
         return (
-          <li className="product" key={data.id}>
+          <Link  to={`/product/${data.id}`} className="product" key={data.id}>
             <img src={data.img} alt={data.name} />
             <h2>{data.name}</h2>
             <h4>{data.DiscountedPrice}</h4>
@@ -27,7 +28,7 @@ function Products() {
               <span>{data.score}</span>
             </div>
             <button>see more ...</button>
-          </li>
+          </Link>
         );
       })}
     </ul>

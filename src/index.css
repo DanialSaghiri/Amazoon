@@ -182,7 +182,7 @@ ul, li{
 .signInText:hover {
   border: 1px solid black;
 }
-.signInText:hover + .infoSignIn {
+.signInText:hover + .infoSignIn , .detailsBordOn {
   display: inline-block;
 }
 .info:hover,

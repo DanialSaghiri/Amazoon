@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import { useRef } from "react";
 
+import Home from "./page/Home";
+import Product from "./page/Product/Product";
 
 import Header from "./component/UI/Header";
 import Footer from "./component/UI/Footer";
-import Home from "../page/Home";
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='/product/:id' element={<Product />} />
       </Routes>
       <Footer scrol={scrol}/>
     </>

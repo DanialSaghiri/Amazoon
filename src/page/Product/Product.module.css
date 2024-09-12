@@ -1,0 +1,143 @@
+.product {
+  display: flex;
+  gap: 8px;
+  background-color: white;
+}
+.product > section > img {
+  width: 300px;
+  height: 300px;
+}
+.product section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 12px;
+  padding: 4px;
+  border-bottom: 1px solid gray;
+}
+.rate {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.scoreBord,.detailsBord , .bordShop{
+  width: 70%;
+  cursor: pointer;
+  border-radius: 10px;
+  position: absolute;
+  top: 25px;
+  left: -20px;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 8px;
+  z-index: 70;
+  display: none;
+}
+.infoRange {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+.range1,
+.range2,
+.range3 {
+  width: 72%;
+  height: 20px;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+.range1 div,
+.range2 div,
+.range3 div {
+  width: 60%;
+  height: 18px;
+  background-color: gold;
+  border-radius: 8px;
+}
+.range2 div {
+  width: 30%;
+}
+.range3 div {
+  width: 15%;
+}
+
+.rate:hover + .scoreBord,
+.scoreBord:hover {
+  display: inline-block;
+}
+.price span {
+  color: red;
+}
+.price div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.price p {
+  text-decoration: line-through;
+}
+.details {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 4px;
+}
+.details > div > span {
+  cursor: pointer;
+  color: aqua;
+}
+.details > div > span:hover {
+  color: crimson;
+}
+.detailsBord {
+  width: 70%;
+  left: 40%;
+}
+.priceInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.priceInfo div , .totalPrice{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.extraSavings{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid gray;
+    padding: 4px 0;
+}
+.extraSavings:hover > p{
+    color: crimson;
+}
+.extraSavings button{
+    padding: 4px;
+    cursor: pointer;
+    color: white;
+    background-color: gold;
+    border: none;
+}
+.extraSavings:hover > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bordShop{
+    left: 30%;
+}

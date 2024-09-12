@@ -1,5 +1,6 @@
-import Products from "../src/component/home/Products";
-import Slider from "../src/component/home/Slider";
+import Products from "../component/home/Products";
+import Slider from "../component/home/Slider";
+
 
 
 function Home() {
