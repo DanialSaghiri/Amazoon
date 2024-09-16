@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <div ref={scrol}></div>
+      <div ref={scrol} className=""></div>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

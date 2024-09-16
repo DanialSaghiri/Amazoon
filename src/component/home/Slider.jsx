@@ -1,16 +1,16 @@
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import image6 from "../../assets/images/slider1.avif";
-import image7 from "../../assets/images/slider2.avif";
-import image8 from "../../assets/images/slider3.avif";
-import image9 from "../../assets/images/slider4.avif";
+import slider1 from "../../assets/images/slider1.avif";
+import slider2 from "../../assets/images/slider2.avif";
+import slider3 from "../../assets/images/slider3.avif";
+import slider4 from "../../assets/images/slider4.avif";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+
+
 
 function Slider() {
   return (
@@ -22,16 +22,16 @@ function Slider() {
       navigation
     >
       <SwiperSlide>
-        <img src={image6} alt="" />
+        <img src={slider1} alt=""  />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={image7} alt="" />
+        <img src={slider2} alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={image8} alt="" />
+        <img src={slider3} alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={image9} alt="" />
+        <img src={slider4} alt="" />
       </SwiperSlide>
     </Swiper>
   );

@@ -1,26 +1,51 @@
-import {  useState } from "react";
+import {  useContext, useEffect, useState } from "react";
+
+import { Link } from "react-router-dom";
+import { CartContext } from "../../context/cart/CartContext";
 
 import image from "../../assets/images/logoAmazoon.avif";
 import image2 from "../../assets/images/logoFlag.avif";
 import image3 from "../../assets/images/shop.avif";
 import image4 from "../../assets/images/logoMenu.avif";
 import image5 from "../../assets/images/logoUser.avif";
-import { Link } from "react-router-dom";
+
+
 
 function Header() {
   const [activeMenu, setActiveMenu] = useState("notActive");
+  const {cart,getCart}=useContext(CartContext);
   const [page, setPage] = useState(false);
-  
+  const [notActiveMenu,setNotActiveMenu]=useState("");
+  const [displayOn1,setDisplayOn1]=useState("");
+  const [displayOn2,setDisplayOn2]=useState("");
+
+  useEffect(()=>{
+    getCart();
+  },[])
 
   const menuHandler = () => {
-    activeMenu === "active"
-      ? setActiveMenu("notActive")
-      : setActiveMenu("active");
+    setActiveMenu("active");
+    setNotActiveMenu("black")
+    
   };
-
+  const dropOn1Handler=()=>{
+    setNotActiveMenu("black");
+    setDisplayOn1("displayOn");
+  }
+  const dropOn2Handler=()=>{
+    setNotActiveMenu("black");
+    setDisplayOn2("displayOn");
+  }
+  const closeMenu=()=>{
+    setActiveMenu("notActive");
+    setNotActiveMenu("");
+    setDisplayOn1("");
+    setDisplayOn2("");
+  }
+  let countQuantity=0;
   return (
     <header>
-      
+      <div className={notActiveMenu} onClick={closeMenu} ></div>
       <section className="upNav">
         <img src={image} alt="Amazoon" />
         <div className="deliver">
@@ -36,16 +61,16 @@ function Header() {
             <option>laptopos</option>
             <option>mobile accessories</option>
           </select>
-          <input type="search" placeholder="Search Amazoon" />
+          <input type="search"  placeholder="Search Amazoon" />
           <i className="bx bx-search-alt-2"></i>
         </div>
-        <div className="infoLanguage">
+        <div className="infoLanguage" onPointerEnter={dropOn1Handler} >
           <div className="language">
             <img src={image2} alt="" />
             <span>EN</span>
             <i className="bx bxs-down-arrow"></i>
           </div>
-          <div className="info">
+          <div className={`info ${displayOn1}`} onMouseLeave={closeMenu}>
             <div className="linkChange">
               <span>change language</span>
               <a href="#">learn more</a>
@@ -83,7 +108,7 @@ function Header() {
             <a href="#">change countery/region</a>
           </div>
         </div>
-        <div className="signIn">
+        <div className="signIn"  onPointerEnter={dropOn2Handler}>
           <div className="signInText">
             <p>Hello, sign in</p>
             <h5>
@@ -91,7 +116,7 @@ function Header() {
               <i className="bx bxs-down-arrow"></i>
             </h5>
           </div>
-          <div className="infoSignIn">
+          <div className={`infoSignIn ${displayOn2}`} onMouseLeave={closeMenu}>
             <button className="btnSignIn">Sign in</button>
             <div className="linkChange">
               <span>New customer? </span>
@@ -117,7 +142,9 @@ function Header() {
         <p>Returns & Orders</p>
         <Link to={"/cart"}  className="shop">
           <div className="imgShop">
-            <span>0</span>
+            <span>{cart.map((item)=>{
+              countQuantity=item.quantity+countQuantity;
+            })} {countQuantity}</span>
             <img src={image3} alt="" />
           </div>
           <h3>Cart</h3>

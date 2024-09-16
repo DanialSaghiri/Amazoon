@@ -1,0 +1,126 @@
+.empty{
+    height: 100vh;
+}
+
+
+.empty  div{
+    width: 95%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    background-color: white;
+}
+.empty a{
+    color: blue;
+    opacity: 0.5;
+}
+.empty a:hover{
+    opacity: 0.8;
+}
+.showCart{
+    display: flex;
+   
+}
+.carts{
+    width: 70%;
+    background-color: white;
+    margin: 40px auto;
+    padding: 32px;
+    border-radius: 8px;
+}
+.carts > div > span{
+    width: 100%;
+    cursor: pointer;
+   color: blue;
+   opacity: 0.5;
+}
+.carts > div > span:hover{
+    color: red;
+}
+.carts > div{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.363);
+    padding: 8px 0;
+}
+.carts > h2{
+    display: flex;
+    justify-content: flex-end;
+}
+.cart{
+    border-bottom:1px solid rgba(128, 128, 128, 0.329) ;
+    padding: 32px;
+    margin: 10px 0;
+}
+
+.detailCart{
+    display: flex;
+    justify-content: space-between;
+}
+.detailCart > h3{
+    width: 10%;
+}
+.detailCart > img{
+    width: 25%;
+  height: 300px;
+}
+.infoCart{
+    width: 60%;
+}
+.infoCart > h3{
+    color: green;
+    font-weight: 500;
+}
+.infoCart img{
+    width: 60px;
+    height: 20px;
+}
+.infoCart > div{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 8px 0;
+    gap: 4px;
+}
+.options{
+    display: flex;
+    align-items: center;
+    
+    
+}
+.options span {
+    
+    cursor: pointer;
+    color: blue;
+    opacity: 0.5;
+    margin-left:8px;
+   
+}
+.options span:hover{
+    color: red;
+}
+.proceed{
+    width: 20%;
+    background-color: white;
+    padding: 20px;
+    margin: 40px auto;
+    height: 160px;
+    border-radius: 8px;
+}
+.proceed div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.btnCart {
+    width: 80%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: goldenrod;
+    padding: 10px;
+    margin: 10px auto;
+  }
