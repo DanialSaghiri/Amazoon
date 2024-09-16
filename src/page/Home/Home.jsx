@@ -1,5 +1,5 @@
-import Products from "../component/home/Products";
-import Slider from "../component/home/Slider";
+import Products from "../../component/home/Products";
+import Slider from "../../component/home/Slider";
 
 
 

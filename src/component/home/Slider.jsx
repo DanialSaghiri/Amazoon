@@ -1,4 +1,4 @@
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation} from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -10,7 +10,7 @@ import slider4 from "../../assets/images/slider4.avif";
 import "swiper/css";
 import "swiper/css/navigation";
 
-
+import styles from "./Slider.module.css"
 
 function Slider() {
   return (
@@ -18,7 +18,7 @@ function Slider() {
       modules={[Navigation]}
       spaceBetween={50}
       slidesPerView={1}
-      className="slider"
+      className={styles.slider}
       navigation
     >
       <SwiperSlide>

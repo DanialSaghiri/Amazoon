@@ -9,7 +9,7 @@ import ImgInfoProduct from "../../component/product/ImgInfoProduct";
 
 
 import { ProductsContext } from "../../context/Products/ProductsContext";
-import { CartContext } from "../../context/cart/CartContext";
+
 
 
 import styles from "./Product.module.css";

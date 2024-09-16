@@ -1,12 +1,13 @@
 import { useContext, useEffect} from "react";
-import { Link } from "react-router-dom";
+
 
 
 
 import { CartContext } from "../../context/cart/CartContext";
 
-import styles from "./Cart.module.css"
+
 import Shop from "../../component/shop/Shop";
+import EmptyShop from "../../component/shop/EmptyShop";
 
 
 
@@ -25,13 +26,7 @@ function Cart(){
 
   
     return <>
-        {cart.length > 0 ? <Shop  /> : 
-        <div className={styles.empty}>
-            <div >
-            <h1>Your Amazon Basket is empty.</h1>
-            <p>Check products page for shopping. <Link to={"/"}>continue shopping</Link></p>
-            </div>  
-        </div>}
+        {cart.length > 0 ? <Shop  /> : <EmptyShop />}
     </>
 }
 export default Cart;

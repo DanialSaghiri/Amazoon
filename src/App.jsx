@@ -1,11 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
-import Home from "./page/Home";
-import Product from "./page/Product/Product";
+
 
 import Header from "./component/UI/Header";
 import Footer from "./component/UI/Footer";
+
+
+import Home from "./page/Home/Home";
+import Product from "./page/Product/Product";
 import Cart from "./page/Cart/Cart";
 
 function App() {

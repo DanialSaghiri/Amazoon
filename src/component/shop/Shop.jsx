@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import imgPrime from "../../assets/images/prime.avif"
 import { CartContext } from "../../context/cart/CartContext";
 
-import styles from "../../page/Cart/Cart.module.css"
+import styles from "./Shop.module.css"
 
 const options = [
     { value: 1, label: "Quantity: 1" },

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import imgScore from "../../assets/images/score.avif"
 
-import styles from "../../page/Product/Product.module.css";
+import styles from "./InformationProduct.module.css";
 
 function InformationProduct({product}){
 

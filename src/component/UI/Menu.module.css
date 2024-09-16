@@ -1,0 +1,63 @@
+.menuAll {
+    width: 100%;
+    background-color: rgba(1, 1, 32, 0.371);
+  }
+  .menuAll img {
+    width: 20px;
+    height: 20px;
+  }
+  .menu > span,
+  .menuBurger {
+    padding: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .menu > span:hover,
+  .menuBurger:hover {
+    border: 1px solid white;
+  }
+  .menuBurger {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  
+  .user{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(37, 39, 50);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px;
+    justify-content: flex-start;
+    color: white;
+  }
+  .user img{
+    width: 40px;
+    height: 40px;
+  }
+  .devices,.department,.music,.aboutUs{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-bottom: 1px solid gray;
+  
+  }
+  .department,.aboutUs{
+    border-bottom: none;
+  }
+  
+  .music{
+    margin-top: 10px;
+    border-top: 1px solid gray;
+    border-bottom: none;
+  }

@@ -5,13 +5,15 @@ import { ProductsContext } from "../../context/Products/ProductsContext";
 
 import imgScore from "../../assets/images/score.avif"
 
+import styles from "./Products.module.css"
+
 function Products() {
   const {datas} =useContext(ProductsContext);
   return (
-    <ul className="products">
+    <ul className={styles.products}>
       {datas.map((data) => {
         return (
-          <Link  to={`/product/${data.id}`} className="product" key={data.id}>
+          <Link  to={`/product/${data.id}`} className={styles.product} key={data.id}>
             <img src={data.img} alt={data.name} />
             <h2>{data.name}</h2>
             <h4>{data.DiscountedPrice}</h4>

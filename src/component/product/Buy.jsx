@@ -1,6 +1,6 @@
 import Select from "react-select";
 
-import styles from "../../page/Product/Product.module.css";
+import styles from "./Buy.module.css";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context/cart/CartContext";
 

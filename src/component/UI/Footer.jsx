@@ -1,6 +1,6 @@
-import imgErth from "../../assets/images/picturErth.avif";
-import image from "../../assets/images/logoAmazoon.avif";
-import image2 from "../../assets/images/logoFlag.avif";
+import picturErth from "../../assets/images/picturErth.avif";
+import logoAmazoon from "../../assets/images/logoAmazoon.avif";
+import logoFlag from "../../assets/images/logoFlag.avif";
 
 
 function Footer({scrol}) {
@@ -43,14 +43,14 @@ function Footer({scrol}) {
           </div>
         </div>
         <div className="informatin">
-          <img src={image} alt="Amazoon" />
+          <img src={logoAmazoon} alt="Amazoon" />
           <div>
-            <img src={imgErth} />
+            <img src={picturErth} />
             <p>English</p>
           </div>
           <p>$ USD - U.s Dollor</p>
           <div>
-            <img src={image2} />
+            <img src={logoFlag} />
             <p>United States</p>
           </div>
         </div>

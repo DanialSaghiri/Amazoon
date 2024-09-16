@@ -1,0 +1,20 @@
+.empty{
+    height: 100vh;
+}
+
+
+.empty  div{
+    width: 95%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    background-color: white;
+}
+.empty a{
+    color: blue;
+    opacity: 0.5;
+}
+.empty a:hover{
+    opacity: 0.8;
+}
