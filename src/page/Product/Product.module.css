@@ -2,6 +2,7 @@
   display: flex;
   gap: 8px;
   background-color: white;
+  padding-top: 50px;
 }
 .product > section > img {
   width: 300px;
@@ -12,6 +13,9 @@
   flex-direction: column;
   gap: 12px;
   padding: 24px;
+}
+.allInformation {
+  width: 50%;
 }
 
 .score {
@@ -28,7 +32,9 @@
   gap: 4px;
   cursor: pointer;
 }
-.scoreBord,.detailsBord , .bordShop{
+.scoreBord,
+.detailsBord,
+.bordShop {
   width: 70%;
   cursor: pointer;
   border-radius: 10px;
@@ -102,42 +108,137 @@
   width: 70%;
   left: 40%;
 }
-.priceInfo{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+.priceInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
-.priceInfo div , .totalPrice{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.priceInfo div,
+.totalPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.extraSavings{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-    cursor: pointer;
-    border-bottom: 1px solid gray;
-    padding: 4px 0;
+.extraSavings {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px solid gray;
+  padding: 4px 0;
 }
-.extraSavings:hover > p{
-    color: crimson;
+.extraSavings:hover > p {
+  color: crimson;
 }
-.extraSavings button{
-    padding: 4px;
-    cursor: pointer;
-    color: white;
-    background-color: gold;
-    border: none;
+.extraSavings button {
+  padding: 4px;
+  cursor: pointer;
+  color: white;
+  background-color: gold;
+  border: none;
 }
-.extraSavings:hover > div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.extraSavings:hover > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.bordShop{
-    left: 30%;
+.bordShop {
+  left: 30%;
+}
+.ModelProduct {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ModelProduct button {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 16px;
+  border: none;
+}
+.ModelProduct p {
+  color: red;
+}
+.btnModelProduct {
+  background-color: goldenrod;
+}
+.informationProduct,
+.aboutProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid gray;
+}
+.informationProduct div,
+.aboutProduct div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.informationProduct p,
+.aboutProduct p,
+.note div:first-child {
+  display: flex;
+  cursor: pointer;
+  gap: 4px;
+  color: gray;
+  align-items: center;
+}
+.informationProduct span:hover,
+.aboutProduct span:hover,
+.note p:hover {
+  color: red;
+  text-decoration: underline;
+}
+.aboutProduct {
+  border-bottom: none;
+}
+.aboutProduct li {
+  font-weight: 500;
+}
+.note span {
+  color: gray;
+}
+.note {
+  padding: 8px 0;
+  border-bottom: 1px solid gray;
+}
+.buy {
+  height: 50%;
+  width: 20%;
+  margin: 30px;
+  padding: 8px;
+  border: 1px solid rgba(32, 178, 171, 0.3);
+  border-radius: 10px;
+}
+.buy h4 {
+  color: green;
+}
+.deliver {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.deliver p:hover {
+  color: red;
+}
+.btnCart {
+  width: 80%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: goldenrod;
+  padding: 10px;
+  margin: 10px auto;
 }

@@ -5,6 +5,7 @@ import image2 from "../../assets/images/logoFlag.avif";
 import image3 from "../../assets/images/shop.avif";
 import image4 from "../../assets/images/logoMenu.avif";
 import image5 from "../../assets/images/logoUser.avif";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [activeMenu, setActiveMenu] = useState("notActive");
@@ -114,13 +115,13 @@ function Header() {
           </div>
         </div>
         <p>Returns & Orders</p>
-        <div className="shop">
+        <Link to={"/cart"}  className="shop">
           <div className="imgShop">
             <span>0</span>
             <img src={image3} alt="" />
           </div>
           <h3>Cart</h3>
-        </div>
+        </Link>
       </section>
       <section className="downNav">
         <div className="menu">

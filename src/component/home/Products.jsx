@@ -6,7 +6,7 @@ import { ProductsContext } from "../../context/Products/ProductsContext";
 import imgScore from "../../assets/images/score.avif"
 
 function Products() {
-  const datas =useContext(ProductsContext);
+  const {datas} =useContext(ProductsContext);
   return (
     <ul className="products">
       {datas.map((data) => {
